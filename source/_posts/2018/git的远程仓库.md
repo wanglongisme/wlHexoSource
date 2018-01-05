@@ -5,9 +5,10 @@ comments: false
 categories:
   - 随笔
   - 2018
-date: 2018-01-05 15:21:13
 tags:
- - git
+  - git
+abbrlink: d1c65c99
+date: 2018-01-05 15:21:13
 ---
 
 1.配置github的ssh key.
@@ -31,8 +32,14 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 1.`git rm -r --cached fileName`,`-r`表示递归
 2.`git commit`
 3.`git push origin(建立关联时,定义的库名称) master`
----
 
->我打算把本地hexo里的文件放到github 仓库中,这样在使用不同电脑时,download一下source目录后重新发布就可以.
+`git clone git@github.com:michaelliao/gitskills.git` 克隆远程库
+
+---
+>遇到的问题:
+>我打算把本地hexo里的文件放到github 仓库中,这样在使用不同电脑时,download一下source目录后重新发布就可以正常使用了.
 >但用'git commit'时,发现有2个文件夹一直无法commit.
 >原因是这两个目录中包含.git目录,应该是git识别出子目录中含有git配置,不能覆盖操作. 
+还遇到一个问题,虽然我把子目录里的.git删除了,但git add和git commit后,git push完了,提交到github的是个空的source目录.
+解决方法: 执行一次`git rm -r --cached source`(source为子目录名称).然后执行git add->git commit->git push
+
