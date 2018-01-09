@@ -1,0 +1,5 @@
+#my configurations
+.deploy_git/
+.npmignore
+node_modules/
+public/

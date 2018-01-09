@@ -26,7 +26,7 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 ```
 把本地库的内容推送到远程，用`git push`命令，实际上是把当前分支 master 推送到远程。
 由于远程库是空的，我们第一次推送 master 分支时，加上了`-u`参数，Git 不但会把本地的master分支内容推送的远程新的 master 分支，还会把本地的master分支和远程的master 分支关联起来，在以后的推送或者拉取时就可以简化命令。
-`git push origin master` 本地做了`git commit`后,就可以把本地master分支的最新修改推送至GitHub.
+`git push origin master` ，本地做了`git commit`后,就可以把本地master分支的最新修改推送至GitHub.
 
 删除远程仓库文件(不删除本地仓库文件)
 1.`git rm -r --cached fileName`,`-r`表示递归

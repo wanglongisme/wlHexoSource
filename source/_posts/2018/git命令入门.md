@@ -14,10 +14,10 @@ tags:
 >各命令使用场景和详细可以参考: [git命令](http://wiki.jikexueyuan.com/project/git-tutorial/version-back.html)
 
 `git init` 将当前目录声明为git仓库
-`git add filename` 将文件添加到仓库
+`git add filename` 将文件添加到仓库(暂存区)
 `git commit -m "注释"` 将添加过的文件commit,多个文件.
 `git status` 查看当前仓库状态
-`git diff`` 查看仓库文件修改信息
+`git diff` 查看仓库文件修改信息
 `git log` 查看版本历史记录
 <!--more-->
 ```
@@ -55,6 +55,6 @@ index cc3e949..b893c83 100644
 >git reset 命令既可以回退版本,也可以把暂存区的修改回退到工作区.
 
 当删除了工作区的文件时,
-1.`git status`命令会显示哪些命令删除了,可以使用`git rm test.txt` `git commit -m `删除文件
+1.`git status`命令会显示哪些文件删除了,可以使用`git rm test.txt` `git commit -m `删除文件
 2.如果删错了,想恢复`git checkout -- test.txt`
 `git checkout`其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
